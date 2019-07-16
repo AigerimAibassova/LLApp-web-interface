@@ -1,0 +1,86 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>LLApp</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/data.css">
+
+    <style >
+        li.disabled {
+            cursor: not-allowed;
+        }
+     
+        li.disabled a{
+            pointer-events: none;
+        }
+             
+         
+    </style>
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="auth.html">Authentication page</a>
+                </li>
+                <li class="nav-item" id = "stats">
+                    <a class="nav-link text-light" href="#">Statistics</a>
+                </li>
+                <li class="nav-item disabled" id = "pat">
+                    <a class="nav-link text-light" href="pat.html">PAT data</a>
+                </li>
+                <li class="nav-item disabled" id = "class">
+                    <a class="nav-link text-light" href="LLApp.html">Upload a class</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#" onclick="checkUser('pop')">Population data</a>
+        <a href="#" onclick="checkUser('ex')">Exercise data</a>
+        <a href="#" onclick="checkUser('indiv')">Individual data</a>
+    </div>
+
+    <div id="main">
+        <!-- Use any element to open the sidenav -->
+        <button type="button" class="btn" style="background-color: #bebebe; color: white" onclick="openNav()">Open sidebar</button>
+
+        <br><br><br>
+        <div class="row" id ="charts">
+
+            <h2 style="margin: auto; color: grey">Please select the data type from the navbar on the left</h2>
+        
+        </div>
+    </div>
+
+    
+</body>
+
+<!-- FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+
+
+<!-- Bootstrap JS + JQuery -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+<!-- MAIN JS -->
+<script src="js/data.js"></script>
+
+</html>
